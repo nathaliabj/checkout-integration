@@ -6,6 +6,11 @@
       "dom.iterable",
       "esnext"
     ],
+      "paths": {
+        "@primer-io/app-framework": [
+          "app-framework"
+        ]
+      },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
