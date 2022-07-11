@@ -44,7 +44,7 @@ const Checkout: FC = () => {
     amount: 4500,
   };
 
-  const updateCheckout = (newPrice: number) => {
+  const updateCheckout = (newQuantity: number) => {
     // When there is a client token already present
     // We will proceed to update the token with the updated price & quantity
 
@@ -64,7 +64,7 @@ const Checkout: FC = () => {
             lineItems: [
               {
                 ...lineItems,
-                quantity: quantity,
+                quantity: newQuantity,
               },
             ],
           },
@@ -146,7 +146,7 @@ const Checkout: FC = () => {
               onClick={() => {
                 setQuantity(quantity - 1);
                 setPrice(price - 45);
-                updateCheckout(price - 45);
+                updateCheckout(quantity - 1);
               }}
             >
               -
@@ -157,7 +157,7 @@ const Checkout: FC = () => {
               onClick={() => {
                 setQuantity(quantity + 1);
                 setPrice(price + 45);
-                updateCheckout(price + 45);
+                updateCheckout(quantity + 1);
               }}
             >
               +
