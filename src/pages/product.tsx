@@ -94,6 +94,18 @@ const Checkout: FC = () => {
         body: JSON.stringify({
           orderId: "order-" + Math.random(),
           currencyCode: "GBP",
+          customer: {
+            emailAddress: "testdummy@address.com",
+            billingAddress: {
+              firstName: "john",
+              lastName: "row",
+              addressLine1: "196",
+              addressLine2: "road",
+              city: "london",
+              countryCode: "GB",
+              postalCode: "RE1 5RD",
+            },
+          },
           order: {
             lineItems: [
               {
